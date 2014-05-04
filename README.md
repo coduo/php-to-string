@@ -1,5 +1,7 @@
 # PHP To String
 
+[![Build Status](https://travis-ci.org/coduo/php-to-string.svg?branch=master)](https://travis-ci.org/coduo/php-to-string)
+
 Simple library that allows you to cast any php value into string
 
 ##Installation
