@@ -19,22 +19,25 @@ Supported types:
 * string
 * integer
 * float/double
-* objec
+* object
+* callback
 * array
 * resource
 
 ```php
-$double = new \Coduo\ToString\String(1.12312);
+use Coduo\ToString\String;
+
+$double = new String(1.12312);
 echo $double; // "1.12312"
 
-$datetime = new \Coduo\ToString\String(new \DateTime());
+$datetime = new String(new \DateTime());
 echo $datetime; // "\DateTime"
 
-$array = new \Coduo\ToString\String(array('foo', 'bar', 'baz'));
+$array = new String(array('foo', 'bar', 'baz'));
 echo $array; // "Array(3)"
 
 $res = fopen(sys_get_temp_dir() . "/foo", "w");
-$resource = new \Coduo\ToString\String($res);
+$resource = new String($res);
 echo $resource; // "Resource(stream)"
 
 ```
