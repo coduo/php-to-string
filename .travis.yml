@@ -9,4 +9,5 @@ before_script:
     - curl -s http://getcomposer.org/installer | php
     - php composer.phar --dev install
 
-script: bin/phpspec r -v
+script:
+  - bin/phpspec run -v -f pretty
