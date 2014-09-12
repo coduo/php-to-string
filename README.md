@@ -10,7 +10,7 @@ Add to your composer.json
 
 ```
 require: {
-   "coduo/php-to-string": "dev-master"
+   "coduo/php-to-string": "1.0.*"
 }
 ```
 
