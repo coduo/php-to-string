@@ -67,7 +67,7 @@ class String
      */
     private function castDoubleToString()
     {
-        $formatter = new \NumberFormatter($this->locale, \NumberFormatter::PATTERN_DECIMAL);
+        $formatter = new \NumberFormatter($this->locale, \NumberFormatter::DEFAULT_STYLE);
         return $formatter->format($this->value);
     }
 }

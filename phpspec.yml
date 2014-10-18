@@ -1,2 +1,2 @@
 extensions:
-  - Coduo\PhpSpec\DataProviderExtension
+  - Coduo\PhpSpec\DataProvider\DataProviderExtension
