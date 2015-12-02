@@ -2,7 +2,7 @@
 
 namespace Coduo\ToString;
 
-class String
+class StringConverter
 {
     /**
      * @var mixed
