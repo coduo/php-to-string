@@ -12,12 +12,12 @@ class Foo
     }
 }
 
-class StringSpec extends ObjectBehavior
+class StringConverterSpec extends ObjectBehavior
 {
     /**
      * @dataProvider positiveConversionExamples
      */
-    function it_convert_values_to_string($value, $expectedValue)
+    function it_converts_values_to_string($value, $expectedValue)
     {
         $this->beConstructedWith($value);
         $this->__toString()->shouldReturn($expectedValue);
@@ -36,13 +36,13 @@ class StringSpec extends ObjectBehavior
         );
     }
 
-    function it_convert_double_to_string_for_specific_locale()
+    function it_converts_double_to_string_for_specific_locale()
     {
         $this->beConstructedWith(1.1, 'pl');
         $this->__toString()->shouldReturn('1,1');
     }
 
-    function it_convert_resource_to_string()
+    function it_converts_resource_to_string()
     {
         $resource = fopen(sys_get_temp_dir() . "/foo", "w");
         $this->beConstructedWith($resource);
