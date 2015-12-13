@@ -27,19 +27,19 @@ Supported types:
 * resource
 
 ```php
-use Coduo\ToString\String;
+use Coduo\ToString\StringConverter;
 
-$double = new String(1.12312);
+$double = new StringConverter(1.12312);
 echo $double; // "1.12312"
 
-$datetime = new String(new \DateTime());
+$datetime = new StringConverter(new \DateTime());
 echo $datetime; // "\DateTime"
 
-$array = new String(array('foo', 'bar', 'baz'));
+$array = new StringConverter(array('foo', 'bar', 'baz'));
 echo $array; // "Array(3)"
 
 $res = fopen(sys_get_temp_dir() . "/foo", "w");
-$resource = new String($res);
+$resource = new StringConverter($res);
 echo $resource; // "Resource(stream)"
 
 ```
