@@ -4,15 +4,7 @@ namespace spec\Coduo\ToString;
 
 use PhpSpec\ObjectBehavior;
 
-class Foo
-{
-    public function __toString()
-    {
-        return 'This is Foo';
-    }
-}
-
-class StringSpec extends ObjectBehavior
+class StringConverterSpec extends ObjectBehavior
 {
     /**
      * @dataProvider positiveConversionExamples
@@ -49,5 +41,13 @@ class StringSpec extends ObjectBehavior
         $this->__toString()->shouldReturn('Resource(stream)');
         fclose($resource);
         unlink(sys_get_temp_dir() . "/foo");
+    }
+}
+
+class Foo
+{
+    public function __toString()
+    {
+        return 'This is Foo';
     }
 }
