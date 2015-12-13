@@ -18,8 +18,8 @@
         "symfony/intl": "~2.5"
     },
     "require-dev": {
-        "phpspec/phpspec": "2.0.*",
-        "coduo/phpspec-data-provider-extension": "dev-master"
+        "phpspec/phpspec": "^2",
+        "coduo/phpspec-data-provider-extension": "^1"
     },
     "autoload": {
         "psr-0": {"" : "src"}
