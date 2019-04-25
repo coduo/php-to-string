@@ -4,7 +4,7 @@
 
 Simple library that allows you to cast any php value into string
 
-##Installation
+## Installation
 
 Add to your composer.json
 
@@ -14,7 +14,7 @@ require: {
 }
 ```
 
-##Usage
+## Usage
 
 Supported types:
 
