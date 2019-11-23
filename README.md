@@ -6,6 +6,10 @@ Status:
 
 * ![Build Status](https://github.com/coduo/php-to-string/workflows/Tests/badge.svg?branch=master) - master
 
+[![Latest Stable Version](https://poser.pugx.org/coduo/php-to-string/v/stable)](https://packagist.org/packages/coduo/php-to-string)
+[![Total Downloads](https://poser.pugx.org/coduo/php-to-string/downloads)](https://packagist.org/packages/coduo/php-to-string)
+[![Latest Unstable Version](https://poser.pugx.org/coduo/php-to-string/v/unstable)](https://packagist.org/packages/coduo/php-to-string)
+[![License](https://poser.pugx.org/coduo/php-to-string/license)](https://packagist.org/packages/coduo/php-to-string)
 
 Simple library that allows you to cast any php value into string
 
