@@ -2,7 +2,7 @@
 
 Status: 
 
-* ![Build Status](https://github.com/coduo/php-to-string/workflows/.github/workflows/testsuite.yml/badge.svg?branch=master) - master
+* ![Build Status](https://github.com/coduo/php-to-string/workflows/Tests/badge.svg?branch=master) - master
 
 
 Simple library that allows you to cast any php value into string
