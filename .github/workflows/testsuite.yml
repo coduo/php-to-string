@@ -1,0 +1,49 @@
+name: Tests
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Tests
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest, macOS-latest]
+        php-versions: ['7.0', '7.1', '7.2', '7.3', '7.4']
+
+    steps:
+      - uses: actions/checkout@master
+        -
+      - name: Setup PHP
+        uses: shivammathur/setup-php@master
+        with:
+          php-version: ${{ matrix.php-versions }}
+          coverage: none
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - uses: actions/cache@v1
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Install dependecies - lowest versions
+        if: matrix.php-versions == '7.0'
+        run: composer update --prefer-lowest
+
+      - name: Install dependecies
+        if: matrix.php-versions != '7.0'
+        run: composer update --prefer-lowest
+
+      - name: Run tests
+        run: composer test
+

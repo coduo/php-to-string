@@ -1,8 +1,9 @@
 {
     "name": "coduo/php-to-string",
     "type": "library",
+    "description": "Simple library that converts PHP value into strings",
     "keywords": ["string", "php", "to string", "to"],
-    "license": "MIT", 
+    "license": "MIT",
     "authors": [
         {
             "name": "Michał Dąbrowski",
@@ -14,22 +15,25 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0",
-        "ext-intl": "*"
+        "php": "^7.0",
+        "ext-intl": "*",
+        "symfony/intl": "^3.4|^4.0|^5.0"
     },
     "require-dev": {
         "phpspec/phpspec": "^2",
-        "coduo/phpspec-data-provider-extension": "^1"
+        "coduo/phpspec-data-provider-extension": "^1.0.3"
     },
     "autoload": {
-        "psr-0": {"" : "src"}
-    },
-    "config": {
-        "bin-dir": "bin"
+        "psr-4": {
+            "Coduo\\ToString\\" : "src/Coduo/ToString"
+        }
     },
     "extra": {
         "branch-alias": {
             "dev-master": "2.1-dev"
         }
+    },
+    "scripts": {
+        "test": "phpspec run --format=pretty"
     }
 }

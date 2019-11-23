@@ -68,6 +68,7 @@ class StringConverter
     private function castDoubleToString()
     {
         $formatter = new \NumberFormatter($this->locale, \NumberFormatter::DEFAULT_STYLE);
+
         return $formatter->format($this->value);
     }
 }
