@@ -31,7 +31,7 @@ class StringConverterSpec extends ObjectBehavior
     function it_convert_double_to_string_for_specific_locale()
     {
         $this->beConstructedWith(1.1, 'en');
-        $this->__toString()->shouldReturn('1,1');
+        $this->__toString()->shouldReturn('1.1');
     }
 
     function it_convert_resource_to_string()
