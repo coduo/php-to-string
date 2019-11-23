@@ -1,5 +1,7 @@
 # PHP To String
 
+Simple library that converts PHP values into strings.
+
 Status: 
 
 * ![Build Status](https://github.com/coduo/php-to-string/workflows/Tests/badge.svg?branch=master) - master
@@ -9,12 +11,8 @@ Simple library that allows you to cast any php value into string
 
 ## Installation
 
-Add to your composer.json
-
 ```
-require: {
-   "coduo/php-to-string": "2.0.*"
-}
+composer require coduo/php-to-string
 ```
 
 ## Usage
@@ -25,7 +23,7 @@ Supported types:
 * integer
 * float/double
 * object
-* callback
+* callable
 * array
 * resource
 
