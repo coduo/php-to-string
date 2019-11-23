@@ -16,7 +16,6 @@
     ],
     "require": {
         "php": "^7.0",
-        "ext-intl": "*",
         "symfony/intl": "^3.4|^4.0|^5.0"
     },
     "require-dev": {
