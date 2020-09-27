@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Coduo\ToString;
 
@@ -26,7 +26,8 @@ class StringConverter
 
     public function __toString()
     {
-        $type = gettype($this->value);
+        $type = \gettype($this->value);
+
         switch ($type) {
             case 'float':
             case 'double':
@@ -36,9 +37,10 @@ class StringConverter
             case 'object':
                 return $this->castObjectToString();
             case 'array':
-                return sprintf('Array(%d)', count($this->value));
+                return \sprintf('Array(%d)', \count($this->value));
             case 'resource':
-                return sprintf("Resource(%s)", get_resource_type($this->value));
+                return \sprintf('Resource(%s)', \get_resource_type($this->value));
+
             default:
                 return (string) $this->value;
         }
@@ -49,9 +51,9 @@ class StringConverter
      */
     private function castObjectToString()
     {
-        return (method_exists($this->value, '__toString'))
-            ? (string)$this->value
-            : '\\' . get_class($this->value);
+        return (\method_exists($this->value, '__toString'))
+            ? (string) $this->value
+            : '\\' . \get_class($this->value);
     }
 
     /**

@@ -15,12 +15,11 @@
         }
     ],
     "require": {
-        "php": "^7.2",
+        "php": ">=7.2",
         "symfony/intl": "^3.4|^4.0|^5.0"
     },
     "require-dev": {
-        "phpspec/phpspec": "^2",
-        "coduo/phpspec-data-provider-extension": "^1.0.3"
+        "phpspec/phpspec": "^6"
     },
     "autoload": {
         "psr-4": {
@@ -33,6 +32,14 @@
         }
     },
     "scripts": {
-        "test": "phpspec run --format=pretty"
+        "cs:php:fix": [
+            "tools/php-cs-fixer fix --using-cache=no"
+        ],
+        "test" : [
+            "phpspec run --format=pretty"
+        ],
+        "static:analyze": [
+            "tools/php-cs-fixer fix --dry-run"
+        ]
     }
 }
