@@ -1,6 +1,5 @@
 vendor/
 bin/
 tools/
-composer.lock
 .DS_Store
 .idea
