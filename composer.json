@@ -32,6 +32,14 @@
         }
     },
     "scripts": {
-        "test": "phpspec run --format=pretty"
+        "cs:php:fix": [
+            "tools/php-cs-fixer fix --using-cache=no"
+        ],
+        "test" : [
+            "phpspec run --format=pretty"
+        ],
+        "static:analyze": [
+            "tools/php-cs-fixer fix --dry-run"
+        ]
     }
 }
