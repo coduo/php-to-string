@@ -6,26 +6,46 @@ use PhpSpec\ObjectBehavior;
 
 class StringConverterSpec extends ObjectBehavior
 {
-    /**
-     * @dataProvider positiveConversionExamples
-     */
-    function it_convert_values_to_string($value, $expectedValue)
+    function it_convert_float_to_string()
     {
-        $this->beConstructedWith($value);
-        $this->__toString()->shouldReturn($expectedValue);
+        $this->beConstructedWith(1.1);
+        $this->__toString()->shouldReturn('1.1');
     }
 
-    function positiveConversionExamples()
+    function it_convert_integer_to_string()
     {
-        return [
-            [1.1, '1.1'],
-            [20, '20'],
-            [true, 'true'],
-            [new \stdClass(), '\stdClass'],
-            [new Foo(), 'This is Foo'],
-            [['foo', 'bar'], 'Array(2)'],
-            [function() {return 'test';}, '\Closure']
-        ];
+        $this->beConstructedWith(20);
+        $this->__toString()->shouldReturn('20');
+    }
+
+    function it_convert_boolean_to_string()
+    {
+        $this->beConstructedWith(true);
+        $this->__toString()->shouldReturn('true');
+    }
+
+    function it_convert_object_std_class_to_string()
+    {
+        $this->beConstructedWith(new \stdClass);
+        $this->__toString()->shouldReturn('\stdClass');
+    }
+
+    function it_convert_object_with_too_string_to_string()
+    {
+        $this->beConstructedWith(new Foo());
+        $this->__toString()->shouldReturn('This is Foo');
+    }
+
+    function it_convert_array_to_string()
+    {
+        $this->beConstructedWith(['foo', 'bar']);
+        $this->__toString()->shouldReturn('Array(2)');
+    }
+
+    function it_convert_closure_to_string()
+    {
+        $this->beConstructedWith(function() {return 'test';});
+        $this->__toString()->shouldReturn('\Closure');
     }
 
     function it_convert_double_to_string_for_specific_locale()

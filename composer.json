@@ -15,12 +15,11 @@
         }
     ],
     "require": {
-        "php": "^7.2",
+        "php": ">=7.2",
         "symfony/intl": "^3.4|^4.0|^5.0"
     },
     "require-dev": {
-        "phpspec/phpspec": "^2",
-        "coduo/phpspec-data-provider-extension": "^1.0.3"
+        "phpspec/phpspec": "^2 | ^3 | ^4 | ^5 | ^6"
     },
     "autoload": {
         "psr-4": {
