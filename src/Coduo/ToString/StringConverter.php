@@ -10,18 +10,11 @@ class StringConverter
     private $value;
 
     /**
-     * @var string
-     */
-    private $locale;
-
-    /**
      * @param mixed $value
-     * @param string $locale
      */
-    public function __construct($value, $locale = 'en')
+    public function __construct($value)
     {
         $this->value = $value;
-        $this->locale = $locale;
     }
 
     public function __toString()
@@ -29,9 +22,6 @@ class StringConverter
         $type = \gettype($this->value);
 
         switch ($type) {
-            case 'float':
-            case 'double':
-                return $this->castDoubleToString();
             case 'boolean':
                 return $this->castBooleanToString();
             case 'object':
@@ -40,7 +30,8 @@ class StringConverter
                 return \sprintf('Array(%d)', \count($this->value));
             case 'resource':
                 return \sprintf('Resource(%s)', \get_resource_type($this->value));
-
+            case 'float':
+            case 'double':
             default:
                 return (string) $this->value;
         }
@@ -62,15 +53,5 @@ class StringConverter
     private function castBooleanToString()
     {
         return ($this->value) ? 'true' : 'false';
-    }
-
-    /**
-     * @return string
-     */
-    private function castDoubleToString()
-    {
-        $formatter = new \NumberFormatter($this->locale, \NumberFormatter::DEFAULT_STYLE);
-
-        return $formatter->format($this->value);
     }
 }

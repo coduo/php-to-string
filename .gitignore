@@ -1,5 +1,6 @@
 vendor/
 bin/
 tools/
+var/
 .DS_Store
 .idea

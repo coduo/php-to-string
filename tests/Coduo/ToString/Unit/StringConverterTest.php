@@ -60,8 +60,8 @@ final class StringConverterTest extends TestCase
 
     public function test_convert_double_to_string_for_specific_locale() : void
     {
-        $converter = new StringConverter(1.1, 'en');
-        $this->assertSame('1.1', $converter->__toString());
+        $converter = new StringConverter(1000.10002);
+        $this->assertSame('1000.10002', $converter->__toString());
     }
 
     public function test_convert_resource_to_string() : void
