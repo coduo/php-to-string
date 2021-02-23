@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-02-23
+## [3.2.0] - 2021-02-23
 
 ### Changed
 - [1e6528](https://github.com/coduo/php-to-string/commit/1e6528fb7ffe4b44dabe4c9f536d29728d911b6a) - **Migrated from phpspec to phpunit, added integration with aeon-php/automation** - [@norberttech](https://github.com/norberttech)
