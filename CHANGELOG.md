@@ -3,6 +3,9 @@
 ### Changed
 - [1e6528](https://github.com/coduo/php-to-string/commit/1e6528fb7ffe4b44dabe4c9f536d29728d911b6a) - **Migrated from phpspec to phpunit, added integration with aeon-php/automation** - [@norberttech](https://github.com/norberttech)
 
+### Removed
+- [ba7b64](https://github.com/coduo/php-to-string/commit/ba7b647f3b1bf5a34d74bc6a1559533ecded8be6) - **symfony/intl dependency** - [@norberttech](https://github.com/norberttech)
+
 ## [3.1.0] - 2020-09-27
 
 ### Added
