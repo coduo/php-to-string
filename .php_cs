@@ -4,13 +4,18 @@ $finder = PhpCsFixer\Finder::create()
     ->files()
     ->in([
         __DIR__ . '/src',
-        __DIR__ . '/spec',
-    ]);
+        __DIR__ . '/tests'
+    ])
+    ->notName('*.phpt');
 
 if (!\file_exists(__DIR__ . '/var')) {
     \mkdir(__DIR__ . '/var');
 }
 
+/**
+ * This configuration was taken from https://github.com/sebastianbergmann/phpunit/blob/master/.php_cs.dist
+ * and slightly adjusted.
+ */
 return PhpCsFixer\Config::create()
     ->setRiskyAllowed(true)
     ->setCacheFile(__DIR__.'/var/.php_cs.cache')
@@ -81,7 +86,7 @@ return PhpCsFixer\Config::create()
         'magic_constant_casing' => true,
         'magic_method_casing' => true,
         'method_argument_space' => ['ensure_fully_multiline' => true],
-        'modernize_types_casting' => true,
+        'modernize_types_casting' => false,
         'multiline_comment_opening_closing' => true,
         'multiline_whitespace_before_semicolons' => true,
         'native_constant_invocation' => false,

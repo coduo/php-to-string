@@ -19,24 +19,31 @@
         "symfony/intl": "^3.4|^4.0|^5.0"
     },
     "require-dev": {
-        "phpspec/phpspec": "^6"
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
         "psr-4": {
             "Coduo\\ToString\\" : "src/Coduo/ToString"
         }
     },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "4.0-dev"
+    "autoload-dev": {
+        "psr-4": {
+            "Coduo\\ToString\\": "tests/Coduo/ToString"
         }
     },
+    "suggest": {
+        "ext-intl": "Required if you are going to use humanizer with locales different than en_EN"
+    },
     "scripts": {
+        "build": [
+            "@static:analyze",
+            "@test"
+        ],
         "cs:php:fix": [
             "tools/php-cs-fixer fix --using-cache=no"
         ],
         "test" : [
-            "phpspec run --format=pretty"
+            "phpunit"
         ],
         "static:analyze": [
             "tools/php-cs-fixer fix --dry-run"
