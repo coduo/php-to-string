@@ -1,6 +1,7 @@
-## [Unreleased] - 2021-07-01
+## [Unreleased] - 2021-09-13
 
 ### Changed
+- [442b5f](https://github.com/coduo/php-to-string/commit/442b5ffc0bd17de21b4c5a1b12cbfbe12aae88e0) - **php-cs-fixer dependency** - [@norberttech](https://github.com/norberttech)
 - [f5b135](https://github.com/coduo/php-to-string/commit/f5b135b61adaaef91de8360961bf0b66bd796a6a) - **Delete FUNDING.yml** - [@norberttech](https://github.com/norberttech)
 
 ## [3.2.0] - 2021-02-23
