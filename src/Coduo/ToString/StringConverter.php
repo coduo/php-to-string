@@ -25,6 +25,10 @@ class StringConverter
             case 'boolean':
                 return $this->castBooleanToString();
             case 'object':
+                if (enum_exists(\get_class($this->value))) {
+                    return (string) $this->value->value;
+                }
+
                 return $this->castObjectToString();
             case 'array':
                 return \sprintf('Array(%d)', \count($this->value));

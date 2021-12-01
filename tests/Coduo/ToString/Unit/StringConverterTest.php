@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Coduo\ToString\Unit;
 
 use Coduo\ToString\StringConverter;
+use Coduo\ToString\TestEnum;
 use PHPUnit\Framework\TestCase;
 
 final class StringConverterTest extends TestCase
@@ -56,6 +57,12 @@ final class StringConverterTest extends TestCase
             return 'test';
         });
         $this->assertSame('\Closure', $converter->__toString());
+    }
+
+    public function test_convert_enum_to_string() : void
+    {
+        $converter = new StringConverter(TestEnum::VALUE_1);
+        $this->assertSame('value_1', $converter->__toString());
     }
 
     public function test_convert_double_to_string_for_specific_locale() : void
