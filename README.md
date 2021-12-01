@@ -29,6 +29,7 @@ Supported types:
 * callable
 * array
 * resource
+* enum
 
 ```php
 use Coduo\ToString\StringConverter;
