@@ -1,10 +1,13 @@
-## [Unreleased] - 2021-09-13
+## [Unreleased] - 2022-11-29
 
 ### Changed
-- [746029](https://github.com/coduo/php-to-string/commit/7460296e14f15977a64c14b05c77d5fcce4fb764) - **Update static-analyze.yml** - [@norberttech](https://github.com/norberttech)
-- [0681cd](https://github.com/coduo/php-to-string/commit/0681cdf4b6cdac34ef592227833f695f3e5acb6f) - **Update testsuite.yml** - [@norberttech](https://github.com/norberttech)
-- [442b5f](https://github.com/coduo/php-to-string/commit/442b5ffc0bd17de21b4c5a1b12cbfbe12aae88e0) - **php-cs-fixer dependency** - [@norberttech](https://github.com/norberttech)
+- [#16](https://github.com/coduo/php-to-string/pull/16) - **Add more examples about StringConverter usage** - [@peter279k](https://github.com/peter279k)
 - [f5b135](https://github.com/coduo/php-to-string/commit/f5b135b61adaaef91de8360961bf0b66bd796a6a) - **Delete FUNDING.yml** - [@norberttech](https://github.com/norberttech)
+
+### Updated
+- [746029](https://github.com/coduo/php-to-string/commit/7460296e14f15977a64c14b05c77d5fcce4fb764) - **static-analyze.yml** - [@norberttech](https://github.com/norberttech)
+- [0681cd](https://github.com/coduo/php-to-string/commit/0681cdf4b6cdac34ef592227833f695f3e5acb6f) - **testsuite.yml** - [@norberttech](https://github.com/norberttech)
+- [442b5f](https://github.com/coduo/php-to-string/commit/442b5ffc0bd17de21b4c5a1b12cbfbe12aae88e0) - **php-cs-fixer dependency** - [@norberttech](https://github.com/norberttech)
 
 ## [3.2.0] - 2021-02-23
 
