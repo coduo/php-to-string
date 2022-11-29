@@ -33,13 +33,19 @@ Supported types:
 ```php
 use Coduo\ToString\StringConverter;
 
+$string = new StringConverter('foo');
+echo $string; // "foo"
+
 $double = new StringConverter(1.12312);
 echo $double; // "1.12312"
+
+$integer = new StringConverter(1);
+echo $integer; // "1"
 
 $datetime = new StringConverter(new \DateTime());
 echo $datetime; // "\DateTime"
 
-$array = new StringConverter(array('foo', 'bar', 'baz'));
+$array = new StringConverter(['foo', 'bar', 'baz']);
 echo $array; // "Array(3)"
 
 $res = fopen(sys_get_temp_dir() . "/foo", "w");
