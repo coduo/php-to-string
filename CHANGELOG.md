@@ -1,4 +1,4 @@
-## [Unreleased] - 2023-03-28
+## [3.2.1] - 2023-03-28
 
 ### Changed
 - [#16](https://github.com/coduo/php-to-string/pull/16) - **Add more examples about StringConverter usage** - [@peter279k](https://github.com/peter279k)
