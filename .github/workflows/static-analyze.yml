@@ -35,9 +35,6 @@ jobs:
           ini-values: memory_limit=-1
           tools: phive, composer:v2
 
-      - name: "Install tools"
-        run: "phive install --trust-gpg-keys E82B2FB314E9906E"
-
       - name: "Install lowest dependencies"
         if: ${{ matrix.dependencies == 'lowest' }}
         run: "composer update --prefer-lowest --no-interaction --no-progress --no-suggest"

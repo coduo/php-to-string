@@ -40,18 +40,18 @@ class StringConverter
     /**
      * @return string
      */
-    private function castObjectToString()
+    private function castBooleanToString()
     {
-        return (\method_exists($this->value, '__toString'))
-            ? (string) $this->value
-            : '\\' . \get_class($this->value);
+        return ($this->value) ? 'true' : 'false';
     }
 
     /**
      * @return string
      */
-    private function castBooleanToString()
+    private function castObjectToString()
     {
-        return ($this->value) ? 'true' : 'false';
+        return (\method_exists($this->value, '__toString'))
+            ? (string) $this->value
+            : '\\' . \get_class($this->value);
     }
 }
