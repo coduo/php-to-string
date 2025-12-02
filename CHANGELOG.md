@@ -1,4 +1,4 @@
-## [Unreleased] - 2025-12-02
+## [3.2.2] - 2025-12-02
 
 ### Changed
 - [653fd3](https://github.com/coduo/php-to-string/commit/653fd3b35a87b1c8b062cc5323eb9136841c7047) - **Upgrade cache action from v2 to v4** - [@norberttech](https://github.com/norberttech)
