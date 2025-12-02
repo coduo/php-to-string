@@ -21,6 +21,11 @@ jobs:
           - "lowest"
           - "highest"
         php-version:
+          - "8.5"
+          - "8.4"
+          - "8.3"
+          - "8.2"
+          - "8.1"
           - "8.0"
           - "7.4"
           - "7.3"
@@ -30,7 +35,7 @@ jobs:
 
     steps:
       - name: "Checkout"
-        uses: "actions/checkout@v2"
+        uses: "actions/checkout@v6"
 
       - name: "Install PHP"
         uses: "shivammathur/setup-php@v2"
